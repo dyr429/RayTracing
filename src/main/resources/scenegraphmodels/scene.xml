@@ -1,0 +1,297 @@
+<scene>
+    <instance name="sphere" path="models/sphere"/>
+    <instance name="box" path="models/box-outside"/>
+    <instance name="cylinder" path="models/cylinder"/>
+    <image name="white" path="textures/white.png"/>
+    <image name="red" path="textures/red.png"/>
+    <image name="yellow" path="textures/yellow.png"/>
+    <image name="green" path="textures/green.png"/>
+    <image name="earth" path="textures/earthmap.png"/>
+    <image name="dice" path="textures/die.png"/>
+    <image name="checkerboard" path="textures/checkerboard-box.png"/>
+    <image name="brick" path="textures/brick.jpg" />
+    <image name="grass" path="textures/grass.jpg" />
+
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.8 0.8 0.8</diffuse>
+        <specular>0.8 0.8 0.8</specular>
+        <position>-60 10 0</position>
+        <spotangle>180</spotangle>
+        <spotdirection>0 -1 0</spotdirection>
+    </light>
+    <light>
+        <ambient>0.2 0.2 0.2</ambient>
+        <diffuse>0.4 0.4 0.4</diffuse>
+        <specular>0.4 0.4 0.4</specular>
+        <position>0 100 0</position>
+        <spotangle>80</spotangle>
+        <spotdirection>0 -1 0</spotdirection>
+    </light>
+    <light>
+        <ambient>0.2 0.2 0.2</ambient>
+        <diffuse>0.4 0.4 0.4</diffuse>
+        <specular>0.4 0.4 0.4</specular>
+        <position>100 100 -100</position>
+        <spotangle>180</spotangle>
+        <spotdirection>0 -1 0</spotdirection>
+    </light>
+
+    <transform>
+        <set>
+            <translate>0 -20 0</translate>
+            <scale>800 2 800</scale>
+        </set>
+        <object instanceof="box" texture="brick">
+            <material>
+                <ambient> 0.8 0.8 0.8 </ambient>
+                <diffuse> 0.8 0.8 0.8</diffuse>
+                <specular> 0.8 0.8 0.8</specular>
+                <shininess> 100 </shininess>
+                <absorption>0.6</absorption>
+                <reflection>0.4</reflection>
+            </material>
+        </object>
+    </transform>
+
+    <transform>
+        <group>
+            <group name="car">
+                <transform>
+                    <set>
+                        <translate>0 15 0</translate>
+                        <scale>30 30 30</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="earth">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform>
+                    <set>
+                        <translate>25 0 25</translate>
+                        <scale>15 15 15</scale>
+                    </set>
+                    <object instanceof="sphere" texture="white">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                            <absorption>0.4 0.4 0.4</absorption>
+                            <reflection>0.6 0.6 0.6</reflection>
+                        </material>
+                    </object>
+                </transform>
+                <transform>
+                    <set>
+                        <translate>25 0 -25</translate>
+                        <scale>15 15 15</scale>
+                    </set>
+                    <object instanceof="sphere" texture="white">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                            <absorption>0.4 0.4 0.4</absorption>
+                            <reflection>0.6 0.6 0.6</reflection>
+                        </material>
+                    </object>
+                </transform>
+                <transform>
+                    <set>
+                        <translate>-25 0 25</translate>
+                        <scale>15 15 15</scale>
+                    </set>
+                    <object instanceof="sphere" texture="white">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                            <absorption>0.4 0.4 0.4</absorption>
+                            <reflection>0.6 0.6 0.6</reflection>
+                        </material>
+                    </object>
+                </transform>
+                <transform>
+                    <set>
+                        <translate>-25 0 -25</translate>
+                        <scale>15 15 15</scale>
+                    </set>
+                    <object instanceof="sphere" texture="white">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                            <absorption>0.4 0.4 0.4</absorption>
+                            <reflection>0.6 0.6 0.6</reflection>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+
+            <transform>
+                <set>
+                    <translate>-150 0 0</translate>
+                </set>
+                <group name="car">
+                    <transform>
+                        <set>
+                            <translate>0 15 0</translate>
+                            <scale>40 40 40</scale>
+                        </set>
+                        <object instanceof="box" texture="earth">
+                            <material>
+                                <ambient>0.2 0.2 0.2</ambient>
+                                <diffuse>0.8 0.8 0.8</diffuse>
+                                <specular>0.8 0.8 0.8</specular>
+                                <shininess>100</shininess>
+                            </material>
+                        </object>
+                    </transform>
+
+                    <transform>
+                        <set>
+                            <translate>25 0 25</translate>
+                            <scale>15 15 15</scale>
+                        </set>
+                        <object instanceof="sphere" texture="white">
+                            <material>
+                                <ambient>0.2 0.2 0.2</ambient>
+                                <diffuse>0.8 0.8 0.8</diffuse>
+                                <specular>0.8 0.8 0.8</specular>
+                                <shininess>100</shininess>
+                                <absorption>0.4 0.4 0.4</absorption>
+                                <reflection>0.6 0.6 0.6</reflection>
+                            </material>
+                        </object>
+                    </transform>
+                    <transform>
+                        <set>
+                            <translate>25 0 -25</translate>
+                            <scale>15 15 15</scale>
+                        </set>
+                        <object instanceof="sphere" texture="white">
+                            <material>
+                                <ambient>0.2 0.2 0.2</ambient>
+                                <diffuse>0.8 0.8 0.8</diffuse>
+                                <specular>0.8 0.8 0.8</specular>
+                                <shininess>100</shininess>
+                                <absorption>0.4 0.4 0.4</absorption>
+                                <reflection>0.6 0.6 0.6</reflection>
+                            </material>
+                        </object>
+                    </transform>
+                    <transform>
+                        <set>
+                            <translate>-25 0 25</translate>
+                            <scale>15 15 15</scale>
+                        </set>
+                        <object instanceof="sphere" texture="white">
+                            <material>
+                                <ambient>0.2 0.2 0.2</ambient>
+                                <diffuse>0.8 0.8 0.8</diffuse>
+                                <specular>0.8 0.8 0.8</specular>
+                                <shininess>100</shininess>
+                                <absorption>0.4 0.4 0.4</absorption>
+                                <reflection>0.6 0.6 0.6</reflection>
+                            </material>
+                        </object>
+                    </transform>
+                    <transform>
+                        <set>
+                            <translate>-25 0 -25</translate>
+                            <scale>15 15 15</scale>
+                        </set>
+                        <object instanceof="sphere" texture="white">
+                            <material>
+                                <ambient>0.2 0.2 0.2</ambient>
+                                <diffuse>0.8 0.8 0.8</diffuse>
+                                <specular>0.8 0.8 0.8</specular>
+                                <shininess>100</shininess>
+                                <absorption>0.4 0.4 0.4</absorption>
+                                <reflection>0.6 0.6 0.6</reflection>
+                            </material>
+                        </object>
+                    </transform>
+                </group>
+            </transform>
+
+
+
+
+            <group name="traffic">
+                <transform>
+                    <set>
+                        <translate>200 -10 20</translate>
+                        <scale>5 80 5</scale>
+                    </set>
+                    <object instanceof="cylinder" texture="white">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                        </material>
+                    </object>
+                </transform>
+
+                <transform>
+                    <set>
+                        <translate>200 60 30</translate>
+                        <scale>10 10 10</scale>
+                    </set>
+                    <object instanceof="box" texture="green">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.2 0.2 0.2</diffuse>
+                            <specular>0.2 0.2 0.2</specular>
+                            <shininess>100</shininess>
+                        </material>
+                    </object>
+                </transform>
+                <transform>
+                    <set>
+                        <translate>200 60 40</translate>
+                        <scale>10 10 10</scale>
+                    </set>
+                    <object instanceof="box" texture="yellow">
+                        <material>
+                            <ambient>0.2 0.2 0.2</ambient>
+                            <diffuse>0.2 0.2 0.2</diffuse>
+                            <specular>0.2 0.2 0.2</specular>
+                            <shininess>100</shininess>
+                        </material>
+                    </object>
+                </transform>
+                <transform>
+                    <set>
+                        <translate>200 60 50</translate>
+                        <scale>10 10 10</scale>
+                    </set>
+                    <object instanceof="box" texture="red">
+                        <material>
+                            <ambient>0.8 0.8 0.8</ambient>
+                            <diffuse>0.8 0.8 0.8</diffuse>
+                            <specular>0.8 0.8 0.8</specular>
+                            <shininess>100</shininess>
+                        </material>
+                    </object>
+                </transform>
+            </group>
+
+
+
+
+
+        </group>
+    </transform>
+</scene>

@@ -1,0 +1,102 @@
+<scene>
+    <instance name="sphere" path="models/sphere"></instance>
+    <instance name="box" path="models/box"></instance>
+    <image name="earth" path="textures/earthmap.png" />
+    <image name="checkerboard" path="textures/checkerboard.png" />
+    <image name="white" path="textures/white.png" />
+
+
+
+
+    <!--    one spot light-->
+    <!--    <light>-->
+    <!--        <ambient>0.8 0.8 0.8</ambient>-->
+    <!--        <diffuse>0.8 0.8 0.8</diffuse>-->
+    <!--        <specular>0.8 0.8 0.8</specular>-->
+    <!--        <position>200 200 200 </position>-->
+    <!--        <spotangle>180</spotangle>-->
+    <!--        <spotdirection>0 -1 0 </spotdirection>-->
+    <!--    </light>-->
+
+
+    <!--two spot light-->
+    <!--    <light>-->
+    <!--        <ambient>0.8 0.8 0.8</ambient>-->
+    <!--        <diffuse>0.8 0.8 0.8</diffuse>-->
+    <!--        <specular>0.8 0.8 0.8</specular>-->
+    <!--        <position>200 200 200 </position>-->
+    <!--        <spotangle>180</spotangle>-->
+    <!--        <spotdirection>0 -1 0 </spotdirection>-->
+    <!--    </light>-->
+
+    <!--    <light>-->
+    <!--        <ambient>0.8 0.8 0.8</ambient>-->
+    <!--        <diffuse>0.8 0.8 0.8</diffuse>-->
+    <!--        <specular>0.8 0.8 0.8</specular>-->
+    <!--        <position>-200 200 -200 </position>-->
+    <!--        <spotangle>180</spotangle>-->
+    <!--        <spotdirection>0 -1 0 </spotdirection>-->
+    <!--    </light>-->
+
+
+    <!--one natual light-->
+<!--    <light>-->
+<!--        <ambient>0.8 0.8 0.8</ambient>-->
+<!--        <diffuse>0.8 0.8 0.8</diffuse>-->
+<!--        <specular>0.8 0.8 0.8</specular>-->
+<!--        <direction>0 -1 -1 </direction>-->
+<!--    </light>-->
+
+<!--one narrow spot light from above-->
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.8 0.8 0.8</diffuse>
+        <specular>0.8 0.8 0.8</specular>
+        <position>0 200 0 </position>
+        <spotangle>30</spotangle>
+        <spotdirection>0 -1 0 </spotdirection>
+    </light>
+
+    <transform>
+        <set>
+            <translate>0 -100 0</translate>
+            <scale>800 2 800</scale>
+
+        </set>
+
+        <object instanceof="box">
+            <material>
+                <ambient> 0.8 0.8 0.8 </ambient>
+                <diffuse> 0.8 0.8 0.8</diffuse>
+                <specular> 0.8 0.8 0.8</specular>
+                <shininess> 100 </shininess>
+                <absorption>0.1</absorption>
+                <reflection>0.9</reflection>
+            </material>
+        </object>
+    </transform>
+    <transform>
+        <set>
+            <translate>100 0 0</translate>
+            <scale>50 50 50</scale>
+
+        </set>
+
+        <object instanceof="box" texture="checkerboard">
+            <material>
+                <ambient> 0.8 0.8 0.8 </ambient>
+                <diffuse> 0.8 0.8 0.8</diffuse>
+                <specular> 0.8 0.8 0.8</specular>
+                <shininess> 100 </shininess>
+                <absorption>0.5</absorption>
+                <reflection>0.5</reflection>
+            </material>
+        </object>
+    </transform>
+    <transform>
+        <set>
+            <translate>0 25 0</translate>
+        </set>
+
+    </transform>
+</scene>
